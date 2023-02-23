@@ -6,6 +6,7 @@ public class Player_Move : MonoBehaviour
 {
     [Header("Movement")]
     public float moveSpeed;
+    public float moveSpeedTwo;
 
     public float groundDrag;
 
@@ -50,6 +51,10 @@ public class Player_Move : MonoBehaviour
     {
         horizontalInput = Input.GetAxisRaw("Horizontal");
         verticalInput = Input.GetAxisRaw("Vertical");
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            rb.AddForce(moveDirection.normalized * moveSpeedTwo * 10f, ForceMode.Force);
+        }
     }
 
     private void MovePlayer()
