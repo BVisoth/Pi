@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -17,6 +18,7 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        transform.Rotate(90f, 0f, 0f);
         agent.SetDestination(player.position);
     }
 
