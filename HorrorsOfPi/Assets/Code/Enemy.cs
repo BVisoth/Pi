@@ -15,6 +15,7 @@ public class Enemy : MonoBehaviour
     {
         agent.speed = agentSpeed;
     }
+
     // Update is called once per frame
     void Update()
     {
