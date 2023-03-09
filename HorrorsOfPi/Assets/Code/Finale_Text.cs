@@ -67,10 +67,12 @@ public class Finale_Text : MonoBehaviour
         if (theInput.text == "3.141592653")
         {
             Debug.Log("Win");
+            SceneManager.LoadScene("Win");
         }
         else
         {
             Debug.Log("Fail");
+            SceneManager.LoadScene("Dead");
         }
     }
 }

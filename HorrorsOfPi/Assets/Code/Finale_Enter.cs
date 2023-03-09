@@ -3,16 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Button_Code : MonoBehaviour
+public class Finale_Enter : MonoBehaviour
 {
-
-    private void Start()
+    private void OnTriggerEnter(Collider player)
     {
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
-    }
-    public void TryAgain()
-    {
-        SceneManager.LoadScene("Game");
+        SceneManager.LoadScene("Finale");
     }
 }
